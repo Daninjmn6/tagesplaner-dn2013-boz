@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dein Tagesplaner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Dein Tagesplaner</h1>
+
+    <div class="date-time">
+      <p id="date"></p>
+      <p id="time"></p>
+    </div>
+<h3>📅 Ereignis hinzufügen</h3>
+<form id="event-form" onsubmit="addEvent(event)">
+  <input type="text" id="event-name" placeholder="Name (z. B. Mamas Geburtstag)" required>
+  <input type="date" id="event-date" required>
+  <input type="time" id="event-start" required>
+  <input type="time" id="event-end" required>
+  <button type="submit">➕ Hinzufügen</button>
+<label>
+  <input type="checkbox" id="event-repeat"> Jährlich wiederholen
+</label>
+</form>
+
+<h4>🎉 Kommende Ereignisse</h4>
+<div id="event-list"></div>
+
+    <div class="quote">
+      <h3>💬 Motivation des Tages:</h3>
+      <p id="quote"></p>
+    </div>
+
+    <div class="todo">
+      <h3>📝 Deine To-Do-Liste</h3>
+      <input type="text" id="todo-input" placeholder="Neue Aufgabe..." />
+      <button onclick="addTodo()">Hinzufügen</button>
+      <ul id="todo-list"></ul>
+    </div>
+
+<div class="chatbot">
+  <h3>💬 Wähle deinen Bot</h3>
+  <select id="bot-select">
+    <option value="romantic">💘 RomantikBot</option>
+    <option value="roast">🔥 RoastBot</option>
+  </select>
+<button onclick="showFavorites()">🌟 Favoriten anzeigen</button>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Schreib eine Nachricht..." />
+  <button onclick="sendMessage()">Senden</button>
+</div>
+<div id="auth-container">
+  <h2>🔐 Login / Registrierung</h2>
+  <input type="text" id="auth-username" placeholder="Benutzername" required><br>
+  <input type="password" id="auth-password" placeholder="Passwort" required><br>
+  <label>
+    <input type="checkbox" id="auth-stay-logged-in"> Angemeldet bleiben
+  </label><br>
+  <label>
+    Avatar:
+    <input type="file" id="auth-avatar" accept="image/*">
+  </label><br><br>
+  <button onclick="register()">Registrieren</button>
+  <button onclick="login()">Einloggen</button>
+</div>
+
+<div id="app-content" style="display:none;">
+  <h3>👋 Willkommen, <span id="current-user"></span>!</h3>
+  <img id="user-avatar" src="" alt="Avatar" width="50" style="border-radius: 50%;">
+  <!-- Hier folgt dein gesamter Tagesplaner + Botsystem -->
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

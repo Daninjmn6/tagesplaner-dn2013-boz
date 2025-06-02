@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h3 {
+  text-align: center;
+  color: #333;
+}
+
+.date-time, .quote, .todo, .chatbot {
+  margin-bottom: 25px;
+}
+
+#todo-input, #chat-input {
+  width: 70%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 5px 0;
+  background: #eee;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#chat-log {
+  background: #f0f0f0;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.chat-entry {
+  margin-bottom: 10px;
+}
+/* Bot-Stile nach Typ */
+.bot-romantic { color: #e91e63; }
+.bot-roast { color: #ff5722; }
+
+.chat-entry.bot-message img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: gold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.favorite-entry {
+  margin: 5px 0;
+  font-style: italic;
+}
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: gold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.favorite-entry {
+  margin: 5px 0;
+  font-style: italic;
+}
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 16px;
+  margin-left: 5px;
+}
+#event-form input, #event-form button {
+  margin: 5px;
+  padding: 6px;
+}
+
+.event-entry {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 5px 0;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.event-entry {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+}
+#auth-container, #app-content {
+  max-width: 400px;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
